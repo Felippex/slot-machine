@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'open sans', roboto, sans-serif;
+    }
+
+.wrap {
+  max-width: 900px;
+  }
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-size: calc(1.625rem + 3vw);
+    font-weight: bold;
+}
+
+.game {
+  text-align: center;
+    margin: 0 auto;
+  }
+
+.game__slot{
+  display: inline-block;
+  margin-bottom: 30px;
+  font-size: 0;
+}
+
+.game__first-slot, 
+.game__second-slot,
+.game__third-slot {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  border: 2px dashed rgba(255, 217, 0);
+  background-image: url(../img/slot-symbols-90px.jpg);
+  overflow: hidden;
+  }
+
+.play__input {
+  display: block;
+  height: 60px;
+  font-size: 20px;
+  width: 90%;
+  max-width: 500px;
+  border: 3px solid black;
+  text-align: center;
+  margin: 3vw auto 40px auto;
+}
+.play__btn-draw{
+  display: block;
+  width: 90%;
+  max-width: 250px;
+  margin: 5vw auto 30px auto;
+}
+
+.game-data{
+padding-top: 6vw;
+}
+
+.game-data__wallet{
+  text-align: center;
+}
+
+
+.game-data__result-text{
+  font-size: 20px;
+}
+
+.game-data__wallet-symbol{
+  width: 80px;
+  height: auto;
+  margin: 0 20px 30px 10px;
+}
+
+.game-data__wallet-value{
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.game-data__score{
+  text-align: center;
+}
+.panel span,
+.score span {
+  font-weight: bold;
+}
