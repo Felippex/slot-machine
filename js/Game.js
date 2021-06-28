@@ -43,6 +43,7 @@ class Game {
     this.wallet.changeWallet(bid, '-');
     this.spanWallet.textContent = `${this.wallet.getWalletValue()}$`;
     this.draw = new Draw(this.startPositions[0], this.startPositions[1], this.startPositions[2]);
+    this.draw.resizeFunction();
     const resultsArray = this.draw.getDrawResult();
     this.startPositions = this.draw.getStartPosition()
     const win = Result.checkWinner(resultsArray)
