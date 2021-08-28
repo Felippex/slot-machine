@@ -36,8 +36,6 @@ class Draw {
     this.distanceForSecond = Math.round(this.velocity * this.timeForSecond / 1000);
     this.distanceForThird = Math.round(this.velocity * this.timeForThird / 1000);
 
-    console.log(this.distanceForFirst);
-
     this.firstSlot.animate([{
       backgroundPositionY: `${this.firstStartPosition}px`
     }, {
@@ -76,6 +74,7 @@ class Draw {
     this.secondStartPosition += this.distanceForSecond;
     this.thirdStartPosition += this.distanceForThird;
 
+    console.log(this.firstStartPosition)
     setTimeout(() => {
       document.getElementById('bid').disabled = false
       document.getElementById('start').disabled = false
@@ -89,10 +88,10 @@ class Draw {
     const that = this;
     window.addEventListener('resize', function () {
       let eachSlotWidthOnResize = that.firstSlot.getBoundingClientRect().width;
-      if (eachSlotWidthOnResize !== that.eachSlotWidth) {
-        that.distanceForFirst = 0;
-        that.distanceForSecond = 0;
-        that.distanceForThird = 0;
+      if ((eachSlotWidthOnResize <= 200) && (eachSlotWidthOnResize >= 90)) {
+        // that.distanceForFirst = 0;
+        // that.distanceForSecond = 0;
+        // that.distanceForThird = 0;
         that.velocity = eachSlotWidthOnResize * 9;
         that.distanceForFirst = Math.round(that.velocity * that.timeForFirst / 1000);
         that.distanceForSecond = Math.round(that.velocity * that.timeForSecond / 1000);
